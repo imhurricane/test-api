@@ -1,0 +1,19 @@
+server:
+  port: 9981
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: qinghua-api
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/qh?serverTimezone=GMT%2B8&characterEncoding=utf8&useSSL=false&tinyInt1isBit=false
+    username: root
+    password: rm-2ze8t37k3h4d54586
+
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml
+  configuration:
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
